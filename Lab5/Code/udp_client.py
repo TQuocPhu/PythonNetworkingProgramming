@@ -1,7 +1,6 @@
 import socket
 
-SERVER_IP = 'localhost'  
-# hoặc thay bằng địa chỉ IP của server nếu chạy khác máy
+SERVER_IP = 'localhost'  # hoặc thay bằng địa chỉ IP của server nếu chạy khác máy
 PORT = 8888
 
 def parse_input(expr):

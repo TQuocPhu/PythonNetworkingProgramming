@@ -1,5 +1,4 @@
 import socket
-import os
 
 SERVER_IP = 'localhost'
 CMD_PORT = 8000
@@ -8,8 +7,7 @@ DATA_PORT = 8001
 def receive_data_to_file(filename):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((SERVER_IP, DATA_PORT))
-        # with open("client_" + filename, "wb") as f:
-        with open("client_" + os.path.basename(filename), "wb") as f:
+        with open("client_" + filename, "wb") as f:
             while True:
                 data = s.recv(1024)
                 if not data:
